@@ -101,8 +101,8 @@ function Carrito(){
                 total = precio + remeras + zapatillas;
                 
         }
-        entrada = prompt("Selecione otro producto o ingrese 0 para finalizar la compra");
-        if (entrada == "0"){
+        modelos = prompt("Selecione otro producto o ingrese 0 para finalizar la compra");
+        if (modelos == "0"){
             alert("en total es " + total + "quiere seguir comprando?")
         }
     }
