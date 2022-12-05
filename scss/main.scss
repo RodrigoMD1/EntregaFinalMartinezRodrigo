@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    background-image: url(../img/pexels-scott-webb-2117938.jpg);
+    background-repeat: repeat-y;
+   
+
+}
+
+h1{ font-size: 3.5em;
+color: white;}
+h2{ font-size: 2.7em;
+color: white;}
+h3{ font-size: 2em;
+    color: white;}
+p{ font-size: 1.25em;
+    color: white;}
+ul{ list-style: none;
+    color: white;}
+li{ font-size: 1.25em;
+    color: white;}
+header{
+    background-image: url("../img/pexels-lukas-hartmann-1055613.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: auto auto;
+    
+}
+
+
+.NombreDeMarca{
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    
+    
+}
+
+
+/* remeras*/
+.Remeras{
+    color: red;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+
+}
+.mainsec{
+    background-image: url(../img/pexels-scott-webb-2117938.jpg);
+    
+}
+.remerasSec{
+    padding: 50px 12px;
+   
+}
+.zapatillasSec{
+    padding: 100px 12px;
+    padding-top: 30px;
+    
+}
+
+.workBx{
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+    
+}
+.workBx .brand{
+    
+    position: static;
+    background-image: url(../img/pexels-anna-nekrashevich-8532616.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workBx .brand:hover{
+    background: #000;
+
+}
+
+.workBx .brand a{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
+.workBx .brand:hover a{
+    color: rgba(255,255,255,1);
+}
+
+
+
+
+/* zapatillas*/
+
+.zapatillas{
+    color: red;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+.Coleccion{
+    font-weight: bold;
+}
+.workBx .brand2{
+    
+    position: static;
+    background-image: url(../img/pexels-terrance-barksdale-11737227.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.workBx .brand2:hover{
+    background: #000;
+
+}
+
+.workBx .brand2 a{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
+.workBx .brand2:hover a{
+    color: rgba(255,255,255,1);
+}
+
+
+.quienessomos{
+    background-color: #000;
+    border-radius: 3%;
+    padding: 80px 12px;
+    
+}
+
+.h3General{
+    text-align: center;
+}
