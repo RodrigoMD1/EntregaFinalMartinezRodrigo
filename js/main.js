@@ -17,6 +17,7 @@ function promocion() {
     }
     return ingresar;
 }
+console.log(promocion());
 
 // let exito =promocion();
 // if (exito){}
@@ -38,6 +39,7 @@ let modelos = prompt("elegi el que mas te guste \n1- remera negra lisa L. \n2- R
 function Carrito(){
     while(modelos != "0"){
         switch (modelos) {
+            
             case "remera negra lisa L":
                 precio = remera;
                 console.log("se agrego al carrito remera negra lisa L");
@@ -77,21 +79,21 @@ function Carrito(){
                 break;
 
             case "zapatillas Air Jordan 1 rojo":
-                precio = remera;
+                precio = zapatillas;
                 console.log("se agrego al carrito zapatillas Air Jordan 1 rojo ");
                  break;
             case "zapatillas Air Jordan 1 negro":
-                precio = remera;
+                precio = zapatillas;
                 console.log("se agrego al carrito zapatillas Air Jordan 1 negro ");
                  break;
                                             
             case "zapatillas Air Jordan 1 azul ":
-                precio = remera;
+                precio = zapatillas;
                 console.log("se agrego al carrito zapatillas Air Jordan 1 azul ");
                 break;
                                             
             case "zapatillas Air Jordan 1 verde":
-                precio = remera;
+                precio = zapatillas;
                 console.log("se agrego al carrito zapatillas Air Jordan 1 verde ");
                 break;
        
@@ -108,6 +110,7 @@ function Carrito(){
     }
     
 }
+console.log(Carrito());
 
 alert("gracias por elegirnos vuelva prontos ");
 
