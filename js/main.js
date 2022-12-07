@@ -17,7 +17,7 @@ function promocion() {
     }
     return ingresar;
 }
-console.log(promocion());
+// console.log(promocion());
 
 // let exito =promocion();
 // if (exito){}
@@ -25,7 +25,7 @@ console.log(promocion());
 let remera = 500;
 let zapatillas = 1300;
 let precio = 0;
-let total =  precio + remera + zapatillas; 
+let total =  remera + zapatillas; 
 
   // let descuento= mail();
  // if (descuento){
@@ -36,14 +36,25 @@ alert("contamos con estos modelos actualmente de ropa y zapatillas ")
 let modelos = prompt("elegi el que mas te guste \n1- remera negra lisa L. \n2- Remera blanca lisa M. \n3 - Remera azul lisa L. \n4 - Remera verde lisa L.\n5 - Remera violeta lisa L.\n6 - Remera morado lisa L.\n7 - Remera amarilla lisa L.\n8 - Remera gris lisa L.\n9 - zapatillas Air Jordan 1 Rojo.\n10 - zapatillas Air Jordan 1 negro. \n11 - zapatillas Air Jordan 1 azul. \n12 - zapatillas Air Jordan 1 verde. \nPresiona 0 para finalizar la compra. ");
 
 
-function Carrito(){
+function Carrito() {
     while(modelos != "0"){
         switch (modelos) {
+
+
             
             case "remera negra lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera negra lisa L");
+                if(remera<=total){
+                    total =remera
+                }
+                alert("se agrego al carrito remera negra lisa L");
+                console.log(remera);
                 break;
+
+
+
+
+
+
             case "remera blanca lisa M":
                 precio = remera;
                 console.log("se agrego al carrito remera blanca lisa M");
