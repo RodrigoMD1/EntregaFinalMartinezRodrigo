@@ -43,12 +43,11 @@ function Carrito() {
 
 
             
-            case "remera negra lisa L":
+            case 1: "remera negra lisa L"
                 if(remera<=total){
                     total =remera
                 }
                 alert("se agrego al carrito remera negra lisa L");
-                console.log("remera");
                 break;
 
 
@@ -56,57 +55,80 @@ function Carrito() {
 
 
 
-            case "remera blanca lisa M":
-                precio = remera;
-                console.log("se agrego al carrito remera blanca lisa M");
-                break;
-            
-            case "remera Azul lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera azul lisa L");
+            case 2: "remera blanca lisa M"
+            if(remera<=total){
+                total =remera
+            }
+                alert("se agrego al carrito remera blanca lisa M");
+                
                 break;
             
-            case "remera Verde lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera Verde lisa L");
+            case 3: "remera Azul lisa L"
+            if(remera<=total){
+                total =remera
+            }
+                alert("se agrego al carrito remera azul lisa L");
+                break;
+            
+            case 4: "remera Verde lisa L"
+            if(remera<=total){
+                total =remera
+            }
+                alert ("se agrego al carrito remera Verde lisa L");
                  break;
             
-            case "remera Violeta lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera Violeta lisa L");
+            case 5: "remera Violeta lisa L"
+            if(remera<=total){
+                total =remera
+            }
+                alert ("se agrego al carrito remera Violeta lisa L");
                 break;
-             case "remera Morado lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera morado lisa L");
+             case 6: "remera Morado lisa L"
+             if(remera<=total){
+                total =remera
+            }
+                alert ("se agrego al carrito remera morado lisa L");
                 break;
             
-            case "remera Amarilla lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera Amarilla lisa L");
+            case 7: "remera Amarilla lisa L"
+            if(remera<=total){
+                total =remera
+            }
+                alert ("se agrego al carrito remera Amarilla lisa L");
                  break;
             
-            case "remera gris lisa L":
-                precio = remera;
-                console.log("se agrego al carrito remera gris lisa L");
+            case 8: "remera gris lisa L"
+            if(remera<=total){
+                total =remera
+            }
+                alert ("se agrego al carrito remera gris lisa L");
                 break;
 
-            case "zapatillas Air Jordan 1 rojo":
-                precio = zapatillas;
-                console.log("se agrego al carrito zapatillas Air Jordan 1 rojo ");
+            case 9: "zapatillas Air Jordan 1 rojo"
+            if(zapatillas<=total){
+                total =zapatillas
+            }
+                alert ("se agrego al carrito zapatillas Air Jordan 1 rojo ");
                  break;
-            case "zapatillas Air Jordan 1 negro":
-                precio = zapatillas;
-                console.log("se agrego al carrito zapatillas Air Jordan 1 negro ");
+            case 10: "zapatillas Air Jordan 1 negro"
+            if(zapatillas<=total){
+                total =zapatillas
+            }
+                alert ("se agrego al carrito zapatillas Air Jordan 1 negro ");
                  break;
                                             
-            case "zapatillas Air Jordan 1 azul ":
-                precio = zapatillas;
-                console.log("se agrego al carrito zapatillas Air Jordan 1 azul ");
+            case 11 :"zapatillas Air Jordan 1 azul "
+            if(zapatillas<=total){
+                total =zapatillas
+            }
+                alert ("se agrego al carrito zapatillas Air Jordan 1 azul ");
                 break;
                                             
-            case "zapatillas Air Jordan 1 verde":
-                precio = zapatillas;
-                console.log("se agrego al carrito zapatillas Air Jordan 1 verde ");
+            case 12: "zapatillas Air Jordan 1 verde"
+            if(zapatillas<=total){
+                total =zapatillas
+            }
+                alert ("se agrego al carrito zapatillas Air Jordan 1 verde ");
                 break;
        
         
