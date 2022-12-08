@@ -33,12 +33,13 @@ let total =  remera + zapatillas;
 
 alert("contamos con estos modelos actualmente de ropa y zapatillas ")
 
-let modelos = prompt("elegi el que mas te guste \n1- remera negra lisa L. \n2- Remera blanca lisa M. \n3 - Remera azul lisa L. \n4 - Remera verde lisa L.\n5 - Remera violeta lisa L.\n6 - Remera morado lisa L.\n7 - Remera amarilla lisa L.\n8 - Remera gris lisa L.\n9 - zapatillas Air Jordan 1 Rojo.\n10 - zapatillas Air Jordan 1 negro. \n11 - zapatillas Air Jordan 1 azul. \n12 - zapatillas Air Jordan 1 verde. \nPresiona 0 para finalizar la compra. ");
+let modelos = parseInt (prompt("elegi el que mas te guste \n1- remera negra lisa L. \n2- Remera blanca lisa M. \n3 - Remera azul lisa L. \n4 - Remera verde lisa L.\n5 - Remera violeta lisa L.\n6 - Remera morado lisa L.\n7 - Remera amarilla lisa L.\n8 - Remera gris lisa L.\n9 - zapatillas Air Jordan 1 Rojo.\n10 - zapatillas Air Jordan 1 negro. \n11 - zapatillas Air Jordan 1 azul. \n12 - zapatillas Air Jordan 1 verde. \nPresiona 0 para finalizar la compra. "));
 
 
 function Carrito() {
     while(modelos != "0"){
         switch (modelos) {
+            
 
 
             
@@ -47,7 +48,7 @@ function Carrito() {
                     total =remera
                 }
                 alert("se agrego al carrito remera negra lisa L");
-                console.log(remera);
+                console.log("remera");
                 break;
 
 
@@ -111,12 +112,12 @@ function Carrito() {
         
             default:
                 alert("el producto no lo tenemos actualmente");
-                total = precio + remeras + zapatillas;
+                
                 
         }
-        modelos = prompt("Selecione otro producto o ingrese 0 para finalizar la compra");
+        modelos = prompt("Desea agregar otro producto? \n1- remera negra lisa L. \n2- Remera blanca lisa M. \n3 - Remera azul lisa L. \n4 - Remera verde lisa L.\n5 - Remera violeta lisa L.\n6 - Remera morado lisa L.\n7 - Remera amarilla lisa L.\n8 - Remera gris lisa L.\n9 - zapatillas Air Jordan 1 Rojo.\n10 - zapatillas Air Jordan 1 negro. \n11 - zapatillas Air Jordan 1 azul. \n12 - zapatillas Air Jordan 1 verde. \nPresiona 0 para finalizar la compra.");
         if (modelos == "0"){
-            alert("en total es " + total + "quiere seguir comprando?")
+            alert("en total es " + total );
         }
     }
     
