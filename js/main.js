@@ -17,7 +17,7 @@ function promocion() {
     }
     return ingresar;
 }
-// console.log(promocion());
+ console.log(promocion());
 
 // let exito =promocion();
 // if (exito){}
