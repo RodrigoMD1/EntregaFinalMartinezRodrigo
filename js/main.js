@@ -1,4 +1,5 @@
-alert("mira nuestro catalogo de ropa disponibles y elegi, pero primero ingresa tu mail para recibir nuestras ofertas");
+
+/*alert("mira nuestro catalogo de ropa disponibles y elegi, pero primero ingresa tu mail para recibir nuestras ofertas");
 
 
 let codigo = "ZXGFI";
@@ -19,92 +20,187 @@ function promocion() {
 }
  console.log(promocion());
 
-// let exito =promocion();
-// if (exito){}
-
-let remera = 500;
-let zapatillas = 1300;
-let total;
-let precio;
-
-  // let descuento= mail();
- // if (descuento){
-   // let rebaja = total - 5%}
-
-alert("contamos con estos modelos actualmente de ropa y zapatillas ")
+ */
 
 
-function Carrito() {
-    let modelos;
-    while (modelos != 0) {
-      modelos = parseInt(
-        prompt(
-          "elegi el que mas te guste \n1- remera negra lisa L. \n2- Remera blanca lisa M. \n3 - Remera azul lisa L. \n4 - Remera verde lisa L.\n5 - Remera violeta lisa L.\n6 - Remera morado lisa L.\n7 - Remera amarilla lisa L.\n8 - Remera gris lisa L.\n9 - zapatillas Air Jordan 1 Rojo.\n10 - zapatillas Air Jordan 1 negro. \n11 - zapatillas Air Jordan 1 azul. \n12 - zapatillas Air Jordan 1 verde. \nPresiona 0 para finalizar la compra. "
-        )
-      );
-      switch (modelos) {
-        case 1:
-            precio = remera;
-          alert("se agrego al carrito remera negra lisa L");
-          break;
+
+
+let resultado= 0; 
+let cantidad = 0; 
+let total = 0; 
+
+
+
+alert("disponemos de esta lista de productos actualmente escriba el numero para agregarlo al carrito  \n 1) remera lisa negra L, \n 2) remera blanca lisa M, \n 3) zapatillas negras nike, \n 4) zapatillas blancas nike ");
+
+let entrada = parseInt(prompt("selecione un producto para el carrito escriba, 5 para finalizar compra"));
+
+const CarritoFinal =[];
+
+function Carrito(){
+  while(entrada != 5){
+
+    switch(entrada){
+      case 1:
+        cantidad= parseInt(prompt("cuantos productos quiere comprar?"));
+        alert("se agrego al carrito " + cantidad + " remeras lisa negra L");
+        if(resultado <= cantidad){
+          total += (cantidad * remeralisanegraL.precio);
+          alert("el valor de su carrito es de $ " + total);  
+        }
+        break;
+
+
         case 2:
-            precio = remera;
-          alert("se agrego al carrito remera blanca lisa M");
-          break;
-        case 3:
-            precio = remera;
-          alert("se agrego al carrito remera azul lisa L");
-          break;
-        case 4:
-            precio = remera;
-          alert("se agrego al carrito remera Verde lisa L");
-          break;
-        case 5:
-            precio = remera;
-          alert("se agrego al carrito remera Violeta lisa L");
-          break;
-        case 6:
-            precio = remera;
-          alert("se agrego al carrito remera morado lisa L");
-          break;
-        case 7:
-            precio = remera;
-          alert("se agrego al carrito remera Amarilla lisa L");
-          break;
-        case 8:
-          precio = remera;
-          alert("se agrego al carrito remera gris lisa L");
-          break;
-        case 9:
-            precio = zapatillas;
-          alert("se agrego al carrito zapatillas Air Jordan 1 rojo ");
-          break;
-        case 10:
-            precio = zapatillas;
-          alert("se agrego al carrito zapatillas Air Jordan 1 negro ");
-          break;
-        case 11:
-            precio = zapatillas;
-          alert("se agrego al carrito zapatillas Air Jordan 1 azul ");
-          break;
-        case 12:
-            precio = zapatillas;
-          alert("se agrego al carrito zapatillas Air Jordan 1 verde ");
+          cantidad= parseInt(prompt("cuantos productos quiere comprar?"));
+          alert("se agrego al carrito " + cantidad + " remeras lisa blanca M");
+          if(resultado <= cantidad){
+            total += (cantidad * remeralisablancaM.precio);
+            alert("el valor de su carrito es de $ " + total);  
+          }
           break;
 
-        default:
-          alert("el producto no lo tenemos actualmente");
-          break;
-      }
-      
-      alert("el precio es " + precio );
-        
+          case 3:
+            cantidad= parseInt(prompt("cuantos productos quiere comprar?"));
+            alert("se agrego al carrito " + cantidad + " zapatillas negras nike");
+            if(resultado <= cantidad){
+              total += (cantidad * zapatillasnegrasnike.precio);
+              alert("el valor de su carrito es de $ " + total);  
+            }
+            break;
+
+
+            case 4:
+            cantidad= parseInt(prompt("cuantos productos quiere comprar?"));
+            alert("se agrego al carrito " + cantidad + " zapatillas blancas nike");
+            if(resultado <= cantidad){
+              total += (cantidad * zapatillasblancasnike.precio);
+              alert("el valor actual  de su carrito es de $ " + total);  
+            }
+            break;
+
+
+    default:
+      alert("el producto no esta disponible actualmente");
+
+      break;
     }
+
+    CarrgarProducto(CarritoFinal, entrada);
+    entrada = parseInt(prompt("selecione un producto para el carrito escriba, 5 para finalizar compra"));
+   
   }
-  Carrito();
+}
+
+
+
+// carga los producto al array "carritofinal"
+function CarrgarProducto(array, entrada) {
+  array.push(entrada);
+}
+console.log(CarritoFinal);
+
+
+// total de la compra 
+
+function sumar(){
+  let TotalCarrito = total;
+  alert("el total de la compra es de $" + TotalCarrito);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// filtrar por nombre
+
+function buscarPorNombre(arr, filtro){
+  const encontrado= arr.filter((ropa)=>{
+    return ropa.nombre.includes(filtro);
+  })
+  return encontrado;
+}
+const servEncontrado = buscarPorNombre(ropa,"zapatillas");
+
+alert(servEncontrado);
+
+
+
+
+/*
+function FiltrarPorNombre(arr,filtro){
+  const encontrado= arr.filter((ropa)=>{
+    return ropa.nombre.includes(filtro);
+  });
+}
+let buscar=prompt("ingrese la tipo de prenda que busca ejemplo zapatilla o remeras");
+const filtrado = FiltrarPorNombre(ropa,buscar);
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+// listado de objetos (productos)
+
+function ropa(nombre, precio, stock){
+  this.nombre = nombre;
+  this.precio = parseFloat(precio);
+  this.stock = parseInt(stock);
+
+
+
+/*
+  agregarImpuesto = (impuesto) => {
+    this.precio = this.precio + (this.precio * impuesto ) /100;
+};
+
+
+   this.stockDisponible=(cant)=>{
+        if(cant<=this.stock){
+            this.stock= this.stock - cant
+        }else{
+            console.log("SIN stock"); 
+        }
+    }
+
+*/
+
+}
+
+const remeralisanegraL = new ropa("remera lisa negra L",500, 20);
+const remeralisablancaM = new ropa("remera lisa blanca M",500, 30);
+const zapatillasnegrasnike = new ropa("zapatilla negra nike",1000, 10);
+const zapatillasblancasnike = new ropa("zapatillas blancas nike",1200, 5);
+
+const listado= [remeralisanegraL,remeralisablancaM,zapatillasnegrasnike,zapatillasblancasnike];
+
+
+Carrito();
+sumar();
+
+
 
 
 alert("gracias por elegirnos vuelva prontos ");
+
 
 
 
