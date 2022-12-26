@@ -30,6 +30,39 @@ let cantidad = 0;
 let total = 0; 
 
 
+// listado de objetos (productos)
+
+function Ropa(nombre, precio, stock){
+  this.nombre = nombre;
+  this.precio = parseFloat(precio);
+  this.stock = parseInt(stock);
+ 
+  agregarImpuesto = (impuesto) => {
+    this.precio = this.precio + (this.precio * impuesto ) /100;
+};
+
+   this.StockDisponible=(cantidad)=>{
+        if(cantidad<=this.stock){
+            this.stock= this.stock - cantidad
+        }else{
+            console.log("SIN stock"); 
+        }
+    }
+
+}
+/*
+remeralisanegraL.agregarImpuesto(100);
+console.log(remeralisanegraL.precio);
+*/
+
+
+const remeralisanegraL = new Ropa("remera lisa negra L",500, 20);
+const remeralisablancaM = new Ropa("remera lisa blanca M",500, 30);
+const zapatillasnegrasnike = new Ropa("zapatilla negra nike",1000, 10);
+const zapatillasblancasnike = new Ropa("zapatillas blancas nike",1200, 5);
+
+const listado= [remeralisanegraL,remeralisablancaM,zapatillasnegrasnike,zapatillasblancasnike];
+
 
 alert("disponemos de esta lista de productos actualmente escriba el numero para agregarlo al carrito  \n 1) remera lisa negra L, \n 2) remera blanca lisa M, \n 3) zapatillas negras nike, \n 4) zapatillas blancas nike ");
 
@@ -98,7 +131,8 @@ function Carrito(){
 function CarrgarProducto(array, entrada) {
   array.push(entrada);
 }
-console.log(CarritoFinal);
+
+// console.log(CarritoFinal);
 
 
 // total de la compra 
@@ -109,29 +143,17 @@ function sumar(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 // filtrar por nombre
 
-function buscarPorNombre(arr, filtro){
-  const encontrado= arr.filter((ropa)=>{
-    return ropa.nombre.includes(filtro);
+function BuscarPorNombre(arr, filtro){
+  const encontrado= arr.filter((listado)=>{
+    return listado.nombre.includes(filtro);
   })
   return encontrado;
 }
-const servEncontrado = buscarPorNombre(ropa,"zapatillas");
+const ServEncontrado = BuscarPorNombre(listado,"zapatillas");
 
-alert(servEncontrado);
-
+console.log(ServEncontrado);
 
 
 
@@ -144,59 +166,12 @@ function FiltrarPorNombre(arr,filtro){
 let buscar=prompt("ingrese la tipo de prenda que busca ejemplo zapatilla o remeras");
 const filtrado = FiltrarPorNombre(ropa,buscar);
 
-
 */
 
-
-
-
-
-
-
-
-
-
-
-
-// listado de objetos (productos)
-
-function ropa(nombre, precio, stock){
-  this.nombre = nombre;
-  this.precio = parseFloat(precio);
-  this.stock = parseInt(stock);
-
-
-
-/*
-  agregarImpuesto = (impuesto) => {
-    this.precio = this.precio + (this.precio * impuesto ) /100;
-};
-
-
-   this.stockDisponible=(cant)=>{
-        if(cant<=this.stock){
-            this.stock= this.stock - cant
-        }else{
-            console.log("SIN stock"); 
-        }
-    }
-
-*/
-
-}
-
-const remeralisanegraL = new ropa("remera lisa negra L",500, 20);
-const remeralisablancaM = new ropa("remera lisa blanca M",500, 30);
-const zapatillasnegrasnike = new ropa("zapatilla negra nike",1000, 10);
-const zapatillasblancasnike = new ropa("zapatillas blancas nike",1200, 5);
-
-const listado= [remeralisanegraL,remeralisablancaM,zapatillasnegrasnike,zapatillasblancasnike];
 
 
 Carrito();
 sumar();
-
-
 
 
 alert("gracias por elegirnos vuelva prontos ");
@@ -210,5 +185,5 @@ alert("gracias por elegirnos vuelva prontos ");
 
 
 
-
+ 
 
