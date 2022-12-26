@@ -1,5 +1,5 @@
 
-/*alert("mira nuestro catalogo de ropa disponibles y elegi, pero primero ingresa tu mail para recibir nuestras ofertas");
+alert("mira nuestro catalogo de ropa disponibles y elegi, pero primero ingresa tu mail para recibir nuestras ofertas");
 
 
 let codigo = "ZXGFI";
@@ -20,7 +20,7 @@ function promocion() {
 }
  console.log(promocion());
 
- */
+ 
 
 
 
@@ -36,23 +36,29 @@ function Ropa(nombre, precio, stock){
   this.nombre = nombre;
   this.precio = parseFloat(precio);
   this.stock = parseInt(stock);
+
  
-  agregarImpuesto = (impuesto) => {
+  this.agregarImpuesto = (impuesto) => {
     this.precio = this.precio + (this.precio * impuesto ) /100;
 };
 
-   this.StockDisponible=(cantidad)=>{
-        if(cantidad<=this.stock){
-            this.stock= this.stock - cantidad
-        }else{
-            console.log("SIN stock"); 
-        }
-    }
+/*
+this.StockDisponible=(cantidad)=>{
+  console.log(this.stock)
+  if(cantidad<=this.stock){
+    this.stock - cantidad;
+  }else{
+    console.log("SIN stock");
+  }
+}
+*/
 
 }
-/*
-remeralisanegraL.agregarImpuesto(100);
+
+
+/* remeralisanegraL.agregarImpuesto(100);
 console.log(remeralisanegraL.precio);
+
 */
 
 
@@ -60,6 +66,15 @@ const remeralisanegraL = new Ropa("remera lisa negra L",500, 20);
 const remeralisablancaM = new Ropa("remera lisa blanca M",500, 30);
 const zapatillasnegrasnike = new Ropa("zapatilla negra nike",1000, 10);
 const zapatillasblancasnike = new Ropa("zapatillas blancas nike",1200, 5);
+/*
+remeralisanegraL.StockDisponible(88);
+console.log(remeralisanegraL.stock);*/
+
+remeralisanegraL.agregarImpuesto(5);
+console.log(remeralisanegraL.precio);
+
+
+
 
 const listado= [remeralisanegraL,remeralisablancaM,zapatillasnegrasnike,zapatillasblancasnike];
 
