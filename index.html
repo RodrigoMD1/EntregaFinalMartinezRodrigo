@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link rel="stylesheet" href="./css/main.css">
-        
-        <title>pagina de prueba</title>
+        <title>pagina de prueba</title> 
     </head>
     
- <body>
+
         <header>
-            <div class="container">
+            <div class="containerHeader">
                 <p class="logo">logo</p>
                 <nav>
                     <a href="#somos-proya">Inicio</a>
@@ -21,6 +21,67 @@
                 </nav>
             </div>
 
+
+
+
+            
+            <div class="container-icon">
+				<div class="container-cart-icon">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="icon-cart"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+						/>
+					</svg>
+					<div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+				</div>
+
+				<div class="container-cart-products hidden-cart">
+					<div class="row-product hidden">
+						<div class="cart-product">
+							<div class="info-cart-product">
+								<span class="cantidad-producto-carrito">1</span>
+								<p class="titulo-producto-carrito">Zapatos Nike</p>
+								<span class="precio-producto-carrito">$80</span>
+							</div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="icon-close"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						</div>
+					</div>
+
+					<div class="cart-total hidden">
+						<h3>Total:</h3>
+						<span class="total-pagar">$200</span>
+					</div>
+					<p class="cart-empty">El carrito está vacío</p>
+				</div>
+			</div>
+
+            
+            
+
             <section class="NombreDeMarca">
                 <h2>
                     nombre de marca 
@@ -29,95 +90,183 @@
         </header>
 
 
-
-    <main class="mainsec">
-        <section class="remerasSec">
+        <main class="mainsec">
 
 
-            <h1 class="Remeras">REMERAS</h1>
-            <h2 class="Coleccion">Coleccion Verano</h2>
-
-
-            <div class="workBx">
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
+            <section class="InicioTienda">
+                <h1>Tienda</h1>
+                <p class="saludo">
+                </p>
+            </section>
+        
+        
+        
+            <section>
+                
+            <div class="tienda">
+                
+        
+                <div class="busqueda">
+                    <div>
+                        <label for="buscaNombre">Buscar por nombre</label>
+                        <input type="search" class="buscador form-control mb-3" id="buscador" name="buscador"
+                    </div>
+                      
+                <div class="contenedorTarjetas card-group">
                 </div>
             </div>
-        </div>
-        </section>
+            </section>
+
+
+           <!-- START SECTION STORE -->
+           <div class="container-items">
+			<div class="item">
+				<figure>
+					<img
+						src="./img/zapatillas nike doradas 01.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatillas Nike Doradas</h2>
+					<p class="price">$80</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/zapatillas azules 01.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatillas Azules</h2>
+					<p class="price">$20</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/pexels-terrance-barksdale-11737227.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatillas Nike Air Force  </h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/zapatillas converse01.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatillas Converse Rojas</h2>
+					<p class="price">$90</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/zapatillas nike negras 01.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatillas Nike Deportivas </h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+            <div class="item">
+				<figure>
+					<img
+						src="./img/zapatillas nike negras 02.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>zapatillas Nike Clasicas</h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/anteojosdesol01.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Anteojos de Lectura</h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/anteojos02.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Anteojos de Lectura y Bloqueador de luz azul</h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/anteojos03.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Anteojos de Lectura y Bloqueador de luz azul color Madera </h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/reloj01.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Reloj Casio </h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="./img/reloj02.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Reloj Rolex</h2>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+    <!-- END SECTION STORE -->
     
-        <section class="zapatillasSec">
-            <h1 class="zapatillas">
-                Zapatillas
-            </h1>
-
-            <h2 class="Coleccion">
-                Coleccion Verano
-            </h2>
-
-            <div class="workBx">
-                <div class="brand2">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand2">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand2">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-                <div class="brand2">
-                    <a href="#">
-                        <h2>Marca</h2>
-                    </a>
-                </div>
-            
-            </div>
-        </div>
- 
-        </section>
+    
         <section>
             <div class="quienessomos">
                 <h3 class="h3General">Quienes Somos</h3>
@@ -131,20 +280,65 @@
             </div>
         </section>
     
-    </main>
-    
-        <footer>
+
+        <section>
             <div class="container">
                 <h2>Contacto</h2>
                 <p>
                     podes encontrarnos en (calle falsa 123) nuestro telefono es 123451
                 </p>
-                <p>&copy;derechos de autor </p>
-            
+
+				
+
+                <form class="row g-3 my-5" id="formularioRegistro">
+                    <legend class="TituloFormulario">Formulario de Contacto</legend>
+        
+                    <div class="col-md-5">
+                        <label for="inputNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputNombre">
+                    </div>
+        
+                    <div class="col-md-5">
+                        <label for="inputApellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="inputApellido">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail">
+                    </div>
+        
+                   
+        
+                    <div class="col-12">
+                        <button type="submit" id="registrar" class="btn btn-primary">Registrarme</button>
+                    </div>
+                </form>
+			
             </div>
+
+            
+        </section>
+    </main>
+    
+        <footer>
+            <p>&copy;derechos de autor </p>
         </footer>
 
-    <script src="./js/main.js"></script>
+
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  
+
+
+
+<script src="./js/main.js"></script>
+
+
+
 </body>
     
     
