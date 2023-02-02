@@ -24,7 +24,6 @@ const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 
 
-
 // buscador 
 document.addEventListener('keyup', e =>{
    if(e.target.matches('#buscador')){
@@ -151,21 +150,6 @@ const showHTML = () =>{
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // parte del registro 
 
 const formRegister = document.getElementById("formularioRegistro"),
@@ -219,7 +203,7 @@ formRegister.reset();
 
 })
 
-// alert del registro 
+// alert del registro             completo
 
 document.getElementById('registrar').addEventListener('click',function(){
 
@@ -234,7 +218,39 @@ document.getElementById('registrar').addEventListener('click',function(){
 });
 
 
+// registro de compra                  pendiente
+document.getElementById('Comprar').addEventListener('click',function(){
+
+	Swal.fire({
+		icon: "success",
+		titleText:"GRACIAS POR SU COMPRA VUELVA PRONTOS",
+		iconColor: "green",
+
+	});
+
+});
 
 
- 
+window.addEventListener("scroll", function() {
+	let nav = document.getElementById("nav");
+	if (window.pageYOffset > 0) {
+	  nav.classList.add("black");
+	} else {
+	  nav.classList.remove("black");
+	}
+  });
 
+
+  
+// MAPA 
+
+function iniciarMap(){
+	var coord = { lat:-34.603747 ,lng:-58.3816794};
+	var Map = new google.maps.Map(document.getElementById('map'),{
+		zoom :10,
+		center: coord
+	}); 
+}
+
+
+// mercadopago api 

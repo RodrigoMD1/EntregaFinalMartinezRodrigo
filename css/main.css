@@ -11,34 +11,88 @@ body {
 
 h1 {
   font-size: 3.5em;
-  color: white; }
+  color: #EEEEEE; }
 
 h2 {
   font-size: 2.7em;
-  color: white; }
+  color: #EEEEEE; }
 
 h3 {
   font-size: 2em;
-  color: white; }
+  color: #EEEEEE; }
 
 p {
   font-size: 1.25em;
-  color: white; }
+  color: #EEEEEE; }
 
 ul {
   list-style: none;
-  color: white; }
+  color: #EEEEEE; }
 
 li {
   font-size: 1.25em;
-  color: white; }
+  color: #EEEEEE; }
 
 header {
-  background-image: url("../img/pexels-lukas-hartmann-1055613.jpg");
-  background-repeat: no-repeat;
+  background: url(../img/pexels-luis-ruiz-991422.jpg);
   background-size: cover;
-  background-position: center center;
-  margin: auto auto; }
+  background-position: center;
+  height: 100vh; }
+
+.container-icon {
+  position: fixed;
+  right: 0;
+  padding: 15px;
+  padding-top: 15px; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  z-index: 1; }
+
+nav ul {
+  position: relative;
+  float: right;
+  margin: 0;
+  padding-right: 50px; }
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  padding: 10px; }
+
+nav ul li a {
+  position: relative;
+  font-size: 20px;
+  padding: 7px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #EEEEEE;
+  line-height: 60px; }
+
+header a:hover {
+  color: #00ADB5; }
+
+.nav__logo img {
+  height: 97px;
+  float: left;
+  padding: 8px;
+  position: sticky;
+  border-radius: 15%; }
+
+nav.black {
+  background-image: linear-gradient(to right, #434343 0%, black 100%); }
+
+.nav__label {
+  float: right;
+  line-height: 95px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none; }
+
+#menu {
+  display: none; }
 
 .NombreDeMarca {
   text-align: center;
@@ -58,10 +112,10 @@ header {
   text-align: center; }
 
 label {
-  color: #fff; }
+  color: #EEEEEE; }
 
 .TituloFormulario {
-  color: #fff; }
+  color: #EEEEEE; }
 
 .tienda {
   padding: 1em;
@@ -86,73 +140,19 @@ label {
   text-align: center; }
 
 .item {
-  border: 4px solid #000;
+  border: 4px solid  #222831;
   padding: 10px;
   border-radius: 20px; }
 
-.item-titulo {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600; }
-
-.item-imagen {
-  height: 350px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 300px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.item-detalles {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0px 15px; }
-
-.item-detalles > .item-precio {
-  margin: 0;
-  color: #fff; }
-
-/* ? SHOPPING CART */
-.shopping-cart-items {
-  padding: 20px 0px; }
-
-.shopping-cart-header {
-  border-bottom: 1px solid #cccccc;
-  color: #fff; }
-
-.shopping-cart-image {
-  max-width: 85px;
-  border-radius: 20px; }
-
-.shopping-cart-quantity-input {
-  max-width: 45px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #eee;
-  padding: 5px; }
-
-.shopping-cart-total {
-  min-height: 96px; }
-
-.containerHeader {
-  background-color: #434343;
-  text-align: center; }
-
-.container-icon {
-  position: absolute;
-  right: 0; }
+.item .price {
+  color: #EEEEEE; }
 
 .count-products {
   position: absolute;
   top: 55%;
   right: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: #222831;
+  color: #EEEEEE;
   width: 25px;
   height: 25px;
   display: flex;
@@ -165,20 +165,21 @@ label {
 
 .container-cart-products {
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 0;
-  background-color: #fff;
+  background-color: #222831;
   width: 400px;
   z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px; }
+  box-shadow: 0 10px 20px  #00ADB5;
+  border-radius: 5px; }
 
 .cart-product {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  margin: 5px;
+  border-bottom: 1px solid  #00ADB5; }
 
 .info-cart-product {
   display: flex;
@@ -187,7 +188,7 @@ label {
 
 .titulo-producto-carrito {
   font-size: 20px;
-  color: blue; }
+  color: #EEEEEE; }
 
 .precio-producto-carrito {
   font-weight: 700;
@@ -196,11 +197,14 @@ label {
 
 .cantidad-producto-carrito {
   font-weight: 400;
-  font-size: 20px; }
+  font-size: 20px;
+  color: #EEEEEE;
+  margin: 25px; }
 
 .icon-close {
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  color: #0097A7; }
 
 .icon-close:hover {
   stroke: red;
@@ -210,16 +214,18 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 15px 0;
   gap: 20px; }
 
 .cart-total h3 {
   font-size: 20px;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #EEEEEE; }
 
 .total-pagar {
   font-size: 20px;
-  font-weight: 900; }
+  font-weight: 900;
+  color: #EEEEEE; }
 
 .hidden-cart {
   display: none; }
@@ -227,10 +233,13 @@ label {
 .icon-cart {
   width: 40px;
   height: 40px;
-  stroke: white; }
+  stroke: #EEEEEE; }
 
 .icon-cart:hover {
   cursor: pointer; }
+
+#Comprar {
+  color: #EEEEEE; }
 
 /* Main */
 .container-items {
@@ -242,7 +251,7 @@ label {
   border-radius: 10px; }
 
 .item:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 10px 20px #00ADB5; }
 
 .item img {
   width: 100%;
@@ -279,7 +288,50 @@ label {
 .filtro {
   display: none; }
 
+#map {
+  height: 500px;
+  width: 100%; }
+
 @media (max-width: 992px) {
   .container-items {
     display: flex;
-    gap: 200px; } }
+    gap: 20px;
+    flex-direction: column; }
+  nav {
+    background: #092427;
+    z-index: 1;
+    height: 95px; }
+  .nav__label {
+    display: block;
+    cursor: pointer;
+    position: relative; }
+  .nav__menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #0097A7;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out; }
+  .nav__menu ul li a {
+    color: #fff;
+    grid-auto-flow: column;
+    text-decoration: none;
+    line-height: 110px;
+    font-weight: bold;
+    padding: auto;
+    padding-left: 120px; }
+  .nav__input:checked + .nav__menu {
+    clip-path: circle(100% at center); }
+  .nav__logo img {
+    height: 95px;
+    float: left;
+    padding: 7px;
+    position: sticky;
+    border-radius: 15%;
+    z-index: 1; } }
