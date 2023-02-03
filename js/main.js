@@ -154,9 +154,9 @@ const showHTML = () =>{
 
 const formRegister = document.getElementById("formularioRegistro"),
 
-nombre = document.querySelector("#inputNombre"),
-apellido = document.querySelector("#inputApellido"),
-email = document.querySelector("#inputEmail");
+nombres = document.querySelector("#inputNombre"),
+apellidos = document.querySelector("#inputApellido"),
+emails = document.querySelector("#inputEmail");
 
 
 let usuarios;
@@ -171,9 +171,9 @@ if(localStorage.getItem("usuarios")) {
 // constructor de usuario 
 class Usuario {
 	constructor(nombre,apellido,email) {
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.email = email;
+		this.nombres = nombre;
+		this.apellidos = apellido;
+		this.emails = email;
 	}
 }
 
@@ -203,31 +203,45 @@ formRegister.reset();
 
 })
 
-// alert del registro             completo
 
-document.getElementById('registrar').addEventListener('click',function(){
+// validacion de registro 
+const formularioRegistro = document.getElementById("formularioRegistro");
+const registrar = document.getElementById("registrar");
+const warnings = document.getElementById("warnings");
+const nombre = document.getElementById("inputNombre");
+const apellido = document.getElementById("inputApellido");
+const email = document.getElementById("inputEmail");
 
-	Swal.fire({
-		icon: "success",
-		titleText:"GRACIAS POR REGISTRARTE",
-		text:"Ahora vas a poder recibir las ultimas ofertas de nuestros productos",
-		iconColor: "purple"
+registrar.addEventListener("click", function() {
+  let entrar = false;
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  let mensajeWarnings = "";
 
-	});
+  if (nombre.value.length < 6) {
+    mensajeWarnings += "Introduzca un nombre <br>";
+    entrar = true;
+  }
 
-});
+  if (!regexEmail.test(email.value)) {
+    mensajeWarnings += "Introduzca un email <br>";
+    entrar = true;
+  }
 
+  if (apellido.value.length < 8) {
+    mensajeWarnings += "Introduzca un apellido <br>";
+    entrar = true;
+  }
 
-// registro de compra                  pendiente
-document.getElementById('Comprar').addEventListener('click',function(){
-
-	Swal.fire({
-		icon: "success",
-		titleText:"GRACIAS POR SU COMPRA VUELVA PRONTOS",
-		iconColor: "green",
-
-	});
-
+  if (entrar) {
+    warnings.innerHTML = mensajeWarnings;
+  } else {
+    Swal.fire({
+      icon: "success",
+      title: "GRACIAS POR REGISTRARTE",
+      text: "Ahora vas a poder recibir las últimas ofertas de nuestros productos",
+      iconColor: "green"
+    });
+  }
 });
 
 
@@ -239,8 +253,6 @@ window.addEventListener("scroll", function() {
 	  nav.classList.remove("black");
 	}
   });
-
-
   
 // MAPA 
 
@@ -253,4 +265,25 @@ function iniciarMap(){
 }
 
 
-// mercadopago api 
+// api de pago 
+
+window.onload = function() {
+	const stripe = Stripe("pk_test_51MXCbtD4tbw4g77tJaKkQqrI2x6prj9j3al9bSBXMmie8suktJqFSoJT143W7p2y2uBGbWbejG5XsxAb4fLajUOP00Vi518I6L");
+	
+	document.getElementById("Checkout").addEventListener("click", function(){
+		stripe.redirectToCheckout({
+			lineItems: [
+				{
+					price: "price_1MXFt3D4tbw4g77tso81sEH6",
+					quantity: 1,
+				},
+			],
+			mode: "payment",
+			successUrl: "http://127.0.0.1:5500/assets/aprobado.html",
+			cancelUrl: "http://127.0.0.1:5500/assets/cancel.html",
+		})
+		.then(function(result) {
+			// Handle the result of the redirect
+		});
+	});
+};

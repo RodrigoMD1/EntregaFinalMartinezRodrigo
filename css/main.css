@@ -39,6 +39,15 @@ header {
   background-position: center;
   height: 100vh; }
 
+span {
+  color: #EEEEEE; }
+
+#yy {
+  color: #00ADB5; }
+
+#of {
+  color: #00ADB5; }
+
 .container-icon {
   position: fixed;
   right: 0;
@@ -292,19 +301,33 @@ label {
   height: 500px;
   width: 100%; }
 
+/* Cancelado scss */
+h4 {
+  color: #0097A7; }
+
+/* warnings de registro  */
+.warnings {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: red;
+  padding-top: 20px; }
+
 @media (max-width: 992px) {
   .container-items {
     display: flex;
     gap: 20px;
     flex-direction: column; }
   nav {
-    background: #092427;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
     z-index: 1;
     height: 95px; }
   .nav__label {
     display: block;
     cursor: pointer;
-    position: relative; }
+    position: relative;
+    right: 35px;
+    bottom: 10px; }
   .nav__menu {
     position: fixed;
     top: 80px;

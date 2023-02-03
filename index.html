@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://js.stripe.com/v3/"></script>
         <link rel="stylesheet" href="./css/main.css">
         <title>pagina de prueba</title> 
     </head>
@@ -15,7 +16,7 @@
             <nav id="nav">
 
 				<div class="nav__logo">
-					<img src="./img/reloj02.jpg" >
+					<img src="./img/logo.png" >
 				</div>
 	
 				<label for="menu" class="nav__label">
@@ -82,11 +83,14 @@
 	
 						<div class="cart-total hidden">
 							<h3>Total:</h3>
-							<span class="total-pagar">$200</span>
+							<span class="total-pagar">$80</span>
 						</div>
 						<p class="cart-empty">El carrito está vacío</p>
 						<div class="col-12">
-							<button type="submit" id="Comprar" class="btn btn-primary">Comprar</button>
+							<button type="submit" id="Checkout" class="btn btn-primary">Comprar</button>
+
+
+							
 							
 							
 						</div>
@@ -97,7 +101,7 @@
 
             <section class="NombreDeMarca">
                 <h2>
-                    nombre de marca 
+                    The Time <span id="yy">&</span> Sole <span id="of">of</span> Rodrigo Duvivier 
                 </h2>
 
 
@@ -289,12 +293,13 @@
         <section>
             <div class="quienessomos">
                 <h3 class="h3General">Quienes Somos</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto dolor repudiandae?
-                    Aspernatur deserunt optio pariatur recusandae at tempore molestias reiciendis totam illo tenetur
-                    dolorem blanditiis ad impedit, aut corporis!
-                    Ut impedit delectus est ipsa neque repellat veritatis iusto id debitis nemo, temporibus provident
-                    consectetur dignissimos atque quisquam eveniet necessitatibus, laboriosam praesentium vel totam quo
-                    ipsum qui quis? Aspernatur, laboriosam.</p>
+                <p>"Somos una empresa joven y emprendedora, con una pasión por la moda y un ojo por el estilo atemporal. Desde nuestro primer día, hemos estado trabajando duro para crear prendas únicas y de alta calidad que se adapten a la vida cotidiana de nuestros clientes.
+
+					Nuestra misión es ofrecer una amplia selección de ropa que sea cómoda, atemporal y accesible para todos. Creemos que la moda no debe ser algo inalcanzable y que cada persona merece sentirse bien consigo misma y con su apariencia.
+					
+					Estamos dedicados a la sostenibilidad y trabajamos con proveedores locales para minimizar nuestro impacto ambiental. También ofrecemos una amplia gama de tallas para que todas las personas puedan encontrar algo que les quede bien y les haga sentir fabulosas.
+					
+					Nos emociona empezar esta aventura y esperamos que te unas a nosotros en el camino. ¡Gracias por apoyar a nuestra empresa!"</p>
                 
             </div>
         </section>
@@ -323,6 +328,9 @@
                         <label for="inputEmail" class="form-label">Email</label>
                         <input type="email" class="form-control" id="inputEmail">
                     </div>
+
+
+					<p class="warnings" id="warnings"></p>
         
                    
         
@@ -352,7 +360,7 @@
     </main>
     
         <footer>
-            <p>&copy;derechos de autor </p>
+            <p>&copy;Todos los derechos reservados. Rodrigo Duvivier es una marca registrada y su uso no autorizado está prohibido. Cualquier reproducción, distribución, exhibición o uso no autorizado de cualquier material o contenido de Rodrigo Duvivier constituye una infracción de los derechos de autor y puede resultar en acciones legales. </p>
         </footer>
 
 
