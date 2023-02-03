@@ -5,8 +5,6 @@ const containerCartProducts = document.querySelector('.container-cart-products')
 btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart')
 })
-
-
 const cartInfo = document.querySelector('cart-product');
 const rowProduct = document.querySelector('.row-product');
 
@@ -36,9 +34,6 @@ document.addEventListener('keyup', e =>{
    } 
     
 })
-
-
-
 
 productslist.addEventListener('click', e => {
 	if (e.target.classList.contains('btn-add-cart')) {
@@ -85,10 +80,6 @@ rowProduct.addEventListener('click', e => {
 		showHTML();
 	}
 });
-
-
-
-
 
 // funcion para mostar HTML
 
@@ -149,7 +140,6 @@ const showHTML = () =>{
 
 };
 
-
 // parte del registro 
 
 const formRegister = document.getElementById("formularioRegistro"),
@@ -203,7 +193,6 @@ formRegister.reset();
 
 })
 
-
 // validacion de registro 
 const formularioRegistro = document.getElementById("formularioRegistro");
 const registrar = document.getElementById("registrar");
@@ -244,7 +233,6 @@ registrar.addEventListener("click", function() {
   }
 });
 
-
 window.addEventListener("scroll", function() {
 	let nav = document.getElementById("nav");
 	if (window.pageYOffset > 0) {
@@ -263,7 +251,6 @@ function iniciarMap(){
 		center: coord
 	}); 
 }
-
 
 // api de pago 
 
