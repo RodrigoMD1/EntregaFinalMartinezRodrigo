@@ -112,6 +112,9 @@ nav.black {
   flex-direction: column;
   height: 100vh; }
 
+.NombreDeMarca h2 {
+  color: #000; }
+
 .quienessomos {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   border-radius: 3%;
