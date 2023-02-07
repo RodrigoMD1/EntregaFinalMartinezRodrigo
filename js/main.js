@@ -18,23 +18,20 @@ const valorTotal = document.querySelector('.total-pagar');
 
 const countProducts = document.querySelector('#contador-productos');
 
-const cartEmpty = document.querySelector('.cart-empty');
+
 const cartTotal = document.querySelector('.cart-total');
 
 
 // buscador 
-document.addEventListener('keyup', e =>{
-   if(e.target.matches('#buscador')){
-    document.querySelectorAll(".item").forEach(Articulos => {
-     Articulos.textContent.toLocaleLowerCase().includes(e.target.value)
-     ? Articulos.classList.remove('filtro')
-     : Articulos.classList.add('filtro');  
-    })
-
-   } 
-    
-})
-
+document.addEventListener('keyup', e => {
+  if (e.target.matches('#buscador')) {
+    document.querySelectorAll(".item").forEach(articulo => {
+      articulo.textContent.toLowerCase().includes(e.target.value)
+        ? articulo.classList.remove('filtro')
+        : articulo.classList.add('filtro');  
+    });
+  }
+});
 productslist.addEventListener('click', e => {
 	if (e.target.classList.contains('btn-add-cart')) {
 		const product = e.target.parentElement;
@@ -90,7 +87,7 @@ const showHTML = () =>{
 		rowProduct.classList.add('hidden');
 		cartTotal.classList.add('hidden');
 	} else {
-		cartEmpty.classList.add('hidden');
+		
 		rowProduct.classList.remove('hidden');
 		cartTotal.classList.remove('hidden');
 	}
